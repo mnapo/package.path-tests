@@ -6,5 +6,16 @@
 5) require them from main and print some tests
 ]]
 
+local M1 = require "subdir/module_1"
+local M2 = require "subdir/module_2"
+
+M1.say("testing")
+print(M2.sum(M1.num, M2.num))
+M1.say(M2.arr["word"])
+for i = 1, #M1.arr do
+    M1.say(M1.arr[i])
+end
+M1.say(M2.arr[1])
+
 --trick to keep console opened
-while true do
+while true do end
