@@ -13,6 +13,8 @@ local M1 = require "subdir/module_1"
 local M2 = require "subdir/module_2"
 local M4 = require "subdir/module_4"
 local M5 = require "module_5"
+local M6 = require "module_6"
+local M6_bis = require "subdir/module_6"
 
 M1.say("testing")
 print(M2.sum(M1.num, M2.num))
@@ -30,6 +32,9 @@ end
 
 print(M4.arr[4])
 M5.m5_func("this", "was", "ei", "t e s t")
+
+print(M6_bis.overriden_or_not())
+M1.say(M6.str)
 
 --trick to keep console opened
 while true do end
