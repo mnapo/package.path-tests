@@ -11,6 +11,8 @@
 package.path = package.path..";./?.lua"
 local M1 = require "subdir/module_1"
 local M2 = require "subdir/module_2"
+local M4 = require "subdir/module_4"
+local M5 = require "module_5"
 
 M1.say("testing")
 print(M2.sum(M1.num, M2.num))
@@ -24,7 +26,10 @@ local test_func = function (some_string)
     return false
 end
 
-M2.lets_get_an_error(test_func)
+--M2.lets_get_an_error(test_func)
+
+print(M4.arr[4])
+M5.m5_func("this", "was", "ei", "t e s t")
 
 --trick to keep console opened
 while true do end
