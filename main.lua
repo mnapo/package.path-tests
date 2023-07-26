@@ -5,9 +5,10 @@
 4) create 2 more different modules, one inside subdir and the other one outside
 5) require them from main and print some tests
 6) create 2 modules with the same name, one inside subdir and one outside it. Try to require them simultaneously (if possible)
-7) check _LOADED and _LUA_PATH globals content. Also print _LUA_PATH environment variable and look at their differences
+7) check _LOADED and LUA_PATH globals content. Also print LUA_PATH environment variable and look at their differences
 ]]
 
+package.path = package.path..";./?.lua"
 local M1 = require "subdir/module_1"
 local M2 = require "subdir/module_2"
 
@@ -18,6 +19,12 @@ for i = 1, #M1.arr do
     M1.say(M1.arr[i])
 end
 M1.say(M2.arr[1])
+
+local test_func = function (some_string)
+    return false
+end
+
+M2.lets_get_an_error(test_func)
 
 --trick to keep console opened
 while true do end

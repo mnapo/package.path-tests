@@ -1,13 +1,16 @@
 local M = {}
 
-M.func = function M.print_arr(arr)
-    for i = 1, #arr do
-        print(arr[i])
+M.handle_errors = function (func_try)
+    if func_try() then
+        return "OK"
+    else
+        return error("dam$, not working")
     end
+    return "wut"
 end
 
-M.num = 10
-M.str = "this is a string from module_3"
-M.arr = {}
+M.num = 7
+M.str = "i'm a string!"
+M.arr = {"i", "'", "m", "an", "array", ",", "kid"}
 
 return M
