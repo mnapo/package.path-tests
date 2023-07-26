@@ -5,6 +5,7 @@
 4) create 2 more different modules, one inside subdir and the other one outside
 5) require them from main and print some tests
 6) create 2 modules with the same name, one inside subdir and one outside it. Try to require them simultaneously (if possible)
+7) check _LOADED and _LUA_PATH globals content. Also print _LUA_PATH environment variable and look at their differences
 ]]
 
 local M1 = require "subdir/module_1"

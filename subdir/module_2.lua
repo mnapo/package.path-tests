@@ -1,3 +1,4 @@
+require "module_3.lua" --wrong! change package.path
 local M = {}
 
 M.sum = function (a, b)
