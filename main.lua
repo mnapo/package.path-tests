@@ -17,7 +17,9 @@ local M6 = require "module_6"
 local M6_bis = require "subdir/module_6"
 
 M1.say("testing")
+
 print(M2.sum(M1.num, M2.num))
+
 M1.say(M2.arr["word"])
 for i = 1, #M1.arr do
     M1.say(M1.arr[i])
@@ -35,6 +37,11 @@ M5.m5_func("this", "was", "ei", "t e s t")
 
 print(M6_bis.overriden_or_not())
 M1.say(M6.str)
+
+--[[deprecated
+print(_G["_LOADED"])
+print(_G["LUA_PATH"])
+]]
 
 --trick to keep console opened
 while true do end
