@@ -41,6 +41,8 @@ M1.say(M6.str)
 --[[deprecated
 print(_G["_LOADED"])
 print(_G["LUA_PATH"])
+conclusion to 7)
+if modules have the same name but different location, they will be loaded as de same one
 ]]
 
 --trick to keep console opened
